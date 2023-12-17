@@ -1,0 +1,15 @@
+sort=+time
+layer=overlay
+default-timeout=3000
+border-size=2
+border-radius=13
+width=500
+height=750
+border-color=#9e1837
+max-history=10
+anchor=bottom-right
+margin=20
+padding=10
+background-color=#332b2f
+font=FiraCodeNerdFont-Bold 15
+max-visible=10

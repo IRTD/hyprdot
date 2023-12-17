@@ -1,0 +1,11 @@
+paperfile="/home/irtd/.config/hypr/hyprpaper.conf"
+preload="preload = $PWD/$1"
+wallpaper="wallpaper = ,$PWD/$1"
+pkill hyprpaper
+rm -f $paperfile
+touch -f $paperfile
+echo $preload > $paperfile
+echo $wallpaper >> $paperfile
+# sed -i 's@.*@'"$replace"'@g' $paperfile
+nohup hyprpaper &> /dev/null &
+disown

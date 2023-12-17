@@ -1,0 +1,3 @@
+current=$(brightnessctl get)
+higher=$(($current - 4800))
+brightnessctl set $higher

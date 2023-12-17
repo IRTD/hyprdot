@@ -1,0 +1,10 @@
+if [ "$1" == "all" ]; then
+    grim -t png
+    grim -t png - | wl-copy -t image/png
+    notify-send Grim "Screenshot taken. Saved at '~/Pictures'. Copied to Clipboard"
+fi
+
+if [ "$1" == "select" ]; then
+    slurp | grim -t png -g - - | wl-copy -t image/png
+    notify-send Slurp "Screenshot taken. Saved at '~/Pictures/Screenshots'. Coped to Clipboard"
+fi

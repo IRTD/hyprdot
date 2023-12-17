@@ -1,0 +1,59 @@
+{
+    "layer": "top",
+    "position": "top",
+    "mod": "dock",
+    "height": 35,
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+    "modules-left": ["backlight", "tray", "hyprland/window"],
+    "modules-center": ["memory", "temperature","cpu", "network"],
+    "modules-right": ["battery", "clock"],
+    "hyprland/window": {
+        "format": "{}"
+    },
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "clock": {
+        "format=alt": "{:%a, %d., %b %H:%M}"
+    },
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{percent}% {icon}",
+        "format-icons": ["", ""]
+    },
+    "cpu": {
+        "interval": 5,
+        "format": "{}% ",
+        "max-length": 10,
+        "on-click": "kitty btop -p 2"
+    },
+    "network": {
+        "interface": "wlan0",
+        "format": "{ifname}",
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ifname} ",
+        "format-disconnected": "",
+        "max-length": 50,
+        "on-click": "kitty btop -p 2"
+    },
+    "memory": {
+        "interval": 30,
+        "format": "{}% ",
+        "max-length": 10,
+        "on-click": "kitty btop -p 2"
+    },
+    "temperature": {
+        "format": "{temperatureC}°C ",
+        "on-click": "kitty btop -p 2"
+    },
+    "tray": {
+        "icon-size": 15,
+        "spacing": 10
+    },
+    "bar": {
+        "height": 20
+    }
+}
