@@ -4,12 +4,12 @@ export MARKED=$(cat ~/.config/util_saves/market_proj)
 
 alias v="nvim"
 alias c="clear"
-alias .="ls"
-alias ls="exa -1laB --git"
+alias .="exa -1laB --git"
 alias x="exit"
 alias stgui="firefox https://localhost:8384"
 alias rm="rm -i"
 alias cp="cp -i"
+alias mv="mv -i"
 alias cwall="change_wallpaper"
 
 mark () {
